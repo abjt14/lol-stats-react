@@ -1,0 +1,154 @@
+.App {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* header */
+header {
+  display: grid;
+  gap: 1rem;
+}
+
+header h1 {
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+header p {
+  color: rgb(221, 221, 221);
+}
+/* header end */
+
+/* search */
+#search-container form {
+  display: flex;
+  gap: 1rem;
+}
+
+#search-container form input[type="text"] {
+  font-size: 4rem;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid grey;
+  outline: none;
+}
+
+#search-container form button[type="submit"] {
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 600px) {
+  #search-container form input[type="text"], #search-container form button[type="submit"] {
+    font-size: 1rem;
+  }
+}
+/* search end */
+
+/* search-results */
+#search-results {
+  padding: 4rem 0;
+  display: grid;
+  gap: 2rem;
+}
+/* search-results end */
+
+/* match */
+.match {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgb(132, 132, 132);
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .match {
+    display: grid;
+    gap: 2rem;
+  }
+}
+
+.match.win {
+  background-color: rgba(0, 127, 0, .25);
+}
+
+.match.loss {
+  background-color: rgba(127, 0, 0, .25);
+}
+
+.match .champion-cont {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.match .champion-cont img {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.match .matchdata-cont {
+  flex: 3;
+  display: grid;
+  gap: .5rem;
+}
+
+.match .matchdata-cont .duration span {
+  font-size: .75rem;
+  color: grey;
+}
+
+.match .matchdata-cont .outcome {
+  font-weight: 600;
+}
+
+.match .matchdata-cont .outcome.win {
+  color: rgb(0, 200, 0);
+}
+
+.match .matchdata-cont .outcome.loss {
+  color: rgb(200, 0, 0);
+}
+
+.match .matchdata-cont .kda span {
+  font-size: .75rem;
+  color: grey;
+}
+
+.match .matchdata-cont .items {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: .5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .match .matchdata-cont .items {
+    margin-top: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.match .matchdata-cont .items .item {
+  display: grid;
+  gap: .25rem;
+}
+
+.match .matchdata-cont .items .item span {
+  font-size: .75rem;
+}
+
+.match .matchdata-cont .items .item img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.no-item-image {
+  height: 2rem;
+  width: 2rem;
+  background-color: rgb(64, 64, 64);
+}
+/* match end */
