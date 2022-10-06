@@ -11,7 +11,6 @@ const Search = () => {
     e.preventDefault();
     const matchesData = await mainAPI(query);
     setmatches(matchesData);
-    console.log(matchesData);
   }
 
   return (
